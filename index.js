@@ -29,6 +29,17 @@ $(document).ready(() => {
     performSearch(query);
   });
 
+
+  $("#search-input").on("keypress", (e) => {
+    if (e.which === 13) {
+      // Enter key
+      e.preventDefault();
+      const query = $("#search-input").val().trim();
+      if (!query) return;
+      performSearch(query);
+    }
+  });
+
   function performSearch(query) {
   $("#results").html("<p class='loading'>Loading...</p>");
 
