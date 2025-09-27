@@ -425,3 +425,113 @@ body {
 .footer-link:hover {
   color: #fff;
 }
+/* Added styles for loading, error, and no-results states */
+.loading,
+.error,
+.no-results {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 18px;
+  color: #888;
+}
+
+.loading {
+  color: #8b5cf6;
+}
+
+.error {
+  color: #ef4444;
+}
+
+.no-results {
+  color: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    height: auto;
+    padding: 15px 0;
+    gap: 15px;
+  }
+
+  .logo-nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .header-actions {
+    order: -1;
+  }
+
+  .search-section {
+    padding: 20px;
+  }
+
+  .search-tags {
+    justify-content: flex-start;
+  }
+
+  .channels-list {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .channel {
+    min-width: auto;
+  }
+
+  .content-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .gif-grid {
+    justify-content: center;
+  }
+
+  .gif-item,
+  .gif-item.tall,
+  .gif-item.wide {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 320px) {
+  .header {
+    padding: 0 15px;
+  }
+
+  .search-section,
+  .content-section {
+    padding: 15px;
+  }
+
+  .search-bar {
+    max-width: 100%;
+  }
+
+  .gif-item,
+  .gif-item.tall,
+  .gif-item.wide {
+    width: 120px;
+    height: 120px;
+  }
+
+  .nav {
+    gap: 10px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+}
