@@ -4,7 +4,6 @@ const $ = window.jQuery; // Declare the jQuery variable
 
 $(document).ready(() => {
   loadDefaultGifs();
-
   $(".nav-link").on("click", function (e) {
     e.preventDefault();
 
@@ -19,7 +18,6 @@ $(document).ready(() => {
     $("#search-input").val(category);
     performSearch(category);
   });
-
   $("#search-btn").on("click", (e) => {
     e.preventDefault();
     const query = $("#search-input").val().trim();
@@ -28,7 +26,6 @@ $(document).ready(() => {
 
     performSearch(query);
   });
-
 
   $("#search-input").on("keypress", (e) => {
     if (e.which === 13) {
@@ -39,7 +36,6 @@ $(document).ready(() => {
       performSearch(query);
     }
   });
-
    $(".tab").on("click", function () {
     $(".tab").removeClass("active");
     $(this).addClass("active");
@@ -47,14 +43,14 @@ $(document).ready(() => {
     performSearch(tagText);
   });
 
-
-  
    $(".tag").on("click", function () {
     $(".tag").removeClass("active");
     $(this).addClass("active");
     const tagText = $(this).text().replace("🔍 ", "");
     $("#search-input").val(tagText);
     performSearch(tagText);
+  });
+
   });
 
   function performSearch(query) {
@@ -102,8 +98,6 @@ function loadDefaultGifs() {
     },
   });
 }
-});
-
 
 function renderResults(items) {
   if (!items || items.length === 0) {
