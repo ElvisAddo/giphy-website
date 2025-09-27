@@ -69,4 +69,28 @@ $(document).ready(() => {
     },
   });
 }
+
+
+function loadDefaultGifs() {
+  $("#results").html("<p class='loading'>Loading...</p>");
+
+  $.ajax({
+    url: API_URL,
+    method: "GET",
+    data: {
+      api_key: API_KEY,
+      q: "food", // Default search term
+      limit: 12,
+      rating: "pg",
+    },
+    success: (response) => {
+      renderResults(response.data);
+    },
+    error: (xhr, status, error) => {
+      $("#results").html(
+        `<p class="error">Error loading default GIFs: ${error}</p>`
+      );
+    },
+  });
+}
 });
