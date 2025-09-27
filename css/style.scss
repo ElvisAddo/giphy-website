@@ -34,7 +34,7 @@ body {
   gap: 40px;
 }
 
-.logo-text {
+.logo-text{
   font-family: "Nunito", sans-serif;
   font-optical-sizing: auto;
   font-weight: 900;
@@ -72,6 +72,7 @@ body {
 }
 
 .nav-link:hover,
+
 .nav-link.active {
   color: #ffffff;
   border-bottom-color: #8b5cf6;
@@ -79,6 +80,7 @@ body {
   border-radius: 6px;
   padding: 8px 12px;
 }
+
 
 .nav-more {
   background: none;
@@ -142,7 +144,6 @@ body {
   border-color: #666;
   color: #fff;
 }
-
 /* Search Section */
 .search-section {
   padding: 40px 20px;
@@ -214,6 +215,7 @@ body {
   transition: all 0.3s ease;
 }
 
+
 .tag.active {
   color: #ffffff;
   border-bottom-color: #8b5cf6;
@@ -274,15 +276,12 @@ body {
 .channel-avatar.red {
   background-color: #ef4444;
 }
-
 .channel-avatar.blue {
   background-color: #3b82f6;
 }
-
 .channel-avatar.orange {
   background-color: #f97316;
 }
-
 .channel-avatar.brown {
   background-color: #a3a3a3;
 }
@@ -302,7 +301,6 @@ body {
   font-size: 12px;
   color: #888;
 }
-
 /* Content Section */
 .content-section {
   padding: 0 20px 40px;
@@ -411,7 +409,7 @@ body {
   width: 300px;
   height: 150px;
 }
-
+// Footer 
 .footer {
   padding: 20px;
   border-top: 1px solid #333;
@@ -434,7 +432,6 @@ body {
 .footer-link:hover {
   color: #fff;
 }
-
 /* Added styles for loading, error, and no-results states */
 .loading,
 .error,
@@ -465,39 +462,49 @@ body {
     padding: 15px 0;
     gap: 15px;
   }
+
   .logo-nav {
     flex-direction: column;
     gap: 15px;
   }
+
   .nav {
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
   }
+
   .header-actions {
     order: -1;
   }
+
   .search-section {
     padding: 20px;
   }
+
   .search-tags {
     justify-content: flex-start;
   }
+
   .channels-list {
     flex-direction: column;
     gap: 12px;
   }
+
   .channel {
     min-width: auto;
   }
+
   .content-header {
     flex-direction: column;
     gap: 15px;
     align-items: flex-start;
   }
+
   .gif-grid {
     justify-content: center;
   }
+
   .gif-item,
   .gif-item.tall,
   .gif-item.wide {
@@ -505,29 +512,33 @@ body {
     height: 150px;
   }
 }
+
 @media (max-width: 320px) {
   .header {
     padding: 0 15px;
   }
+
   .search-section,
   .content-section {
     padding: 15px;
   }
+
   .search-bar {
     max-width: 100%;
   }
+
   .gif-item,
   .gif-item.tall,
   .gif-item.wide {
     width: 120px;
     height: 120px;
   }
+
   .nav {
     gap: 10px;
   }
+
   .nav-link {
     font-size: 14px;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
