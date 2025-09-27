@@ -34,6 +34,13 @@ body {
   gap: 40px;
 }
 
+.logo-text{
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: bold;
+}
+
 .logo {
   display: flex;
   align-items: center;
