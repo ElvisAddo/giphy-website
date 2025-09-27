@@ -40,6 +40,15 @@ $(document).ready(() => {
     }
   });
 
+   $(".tab").on("click", function () {
+    $(".tab").removeClass("active");
+    $(this).addClass("active");
+    const tagText = $(this).text().replace("🔍 ", "");
+    performSearch(tagText);
+  });
+
+
+  
    $(".tag").on("click", function () {
     $(".tag").removeClass("active");
     $(this).addClass("active");
