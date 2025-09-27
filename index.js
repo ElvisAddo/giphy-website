@@ -94,3 +94,44 @@ function loadDefaultGifs() {
   });
 }
 });
+
+
+function renderResults(items) {
+  if (!items || items.length === 0) {
+    $("#results").html("<p class='no-results'>No results found.</p>");
+    return;
+  }
+
+  $("#results").html(""); // clear previous
+
+  items.forEach((item, index) => {
+    const gifUrl = item.images.fixed_width.url;
+    const title = item.title || "Untitled";
+
+    const sizeClass = getSizeClass(index);
+    const card = `
+      <div class="gif-item ${sizeClass}">
+        <img src="${gifUrl}" alt="${title}" loading="lazy">
+      </div>
+    `;
+    $("#results").append(card);
+  });
+}
+
+function getSizeClass(index) {
+  const patterns = [
+    "",
+    "tall",
+    "wide",
+    "",
+    "tall",
+    "",
+    "wide",
+    "",
+    "",
+    "tall",
+    "",
+    "",
+  ];
+  return patterns[index % patterns.length];
+}
